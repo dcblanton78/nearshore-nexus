@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "composite": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "vitest.config.ts"]
+  "include": ["vite.config.mts"]
 }
