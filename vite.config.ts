@@ -1,17 +1,16 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { fileURLToPath } from "url";
-import { dirname, resolve } from "path";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import path from "node:path";
 
 export default defineConfig({
+  base: "/nearshore-nexus/", // <-- repo name between slashes
   plugins: [react()],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "src"),
-      "@/components": resolve(__dirname, "src/components"),
-      "@/lib": resolve(__dirname, "src/lib"),
+      "@": path.resolve(__dirname, "src"),
+      "@/components": path.resolve(__dirname, "src/components"),
+      "@/lib": path.resolve(__dirname, "src/lib"),
     },
   },
 });
